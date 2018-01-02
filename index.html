@@ -7,8 +7,26 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script>
+		function ajax_request() {
+			var xmlhttp = new XMLHttpRequest();
+
+			//var any name' below check both state and readystate
+
+		    xmlhttp.onreadystatechange = function() {
+				if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					// if then show/ set receiving value
+					var test_div = document.getElementById('test');
+					test_div.innerHTML = xmlhttp.responseText;
+				}
+			}
+			// Create then send request
+			xmlhttp.open('GET', 'data.php', true);
+			xmlhttp.send();
+		}
+	</script>
 	<style type="text/css">
-		.btn, input {
+		.btn, .form-control {
 			border-radius: 0;
 		}
 	</style>
@@ -22,7 +40,7 @@
 				</div>	
 			</div>
 
-			<form class="form-horizontal">
+			<div class="form-horizontal">
 					<div class="form-group">
 						<label class="control-label col-md-2">Studerande</label>
 					    <div class="col-md-7">
@@ -54,10 +72,11 @@
 					</div>
 					<div class="form-group">
 						<div class="col-md-7 col-md-offset-2">
-							<button class="btn btn-danger btn-block">Lägg till ny post</button>
+							<button class="btn btn-danger btn-block" onclick="ajax_request();">Lägg till ny post</button>
 						</div>
 					</div>
-			</form>
+			</div>
+			<div id="test"></div>
 			<table class="table table-striped">
 				<thead>
 					<tr class="success">
