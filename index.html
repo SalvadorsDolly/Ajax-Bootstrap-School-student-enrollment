@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>School Record System</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<style type="text/css">
+		.btn, input {
+			border-radius: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="rare-wind-gradient">
+		<div class="container">
+			<div class="jumbotron">
+				<div class="row backgroundimg">
+					<h1 class="deepshd">Skolregister</h1>
+				</div>	
+			</div>
+
+			<form class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-md-2">Studerande</label>
+					    <div class="col-md-7">
+					    	<input type="text" class="form-control">
+					    </div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-2">Kurs ämne</label>
+					    <div class="col-md-3">
+					    	<select class="form-control">
+					    		<option>Matematik</option>
+					    		<option>Häxa</option>
+					    		<option>Under vattenkorg vävning</option>
+					    		<option>Dinosauriehållning</option>
+					    		<option>Robotuppror</option>
+					    		<option>Dataprogramering</option>
+					    	</select>
+					    </div>
+					    <label class="control-label col-md-2">Studentavgift</label>
+					    <div class="col-md-2">
+					    	<input type="number" class="form-control">
+					    </div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-2">Demeriter och Disciplin</label>
+					    <div class="col-md-7">
+					    	<input type="text" class="form-control">
+					    </div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-7 col-md-offset-2">
+							<button class="btn btn-danger btn-block">Lägg till ny post</button>
+						</div>
+					</div>
+			</form>
+			<table class="table table-striped">
+				<thead>
+					<tr class="success">
+						<th>S. NO</th>
+						<th>Elevs namn/Student Name</th>
+						<th>Studentämne/Student subject</th>
+						<th>Studentavgift/Student fee</th>
+						<th>Handling</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Lars</td>
+						<td>Dataprogramering</td>
+						<td>500/=</td>
+						<td>
+							<div class="dropdown">
+								<button class="btn btn-primary" data-toggle="dropdown">Handling<span class="caret"></span></button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Redigera-Edit</li>
+									<li><a href="#">Radera-Delete</li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Svea</td>
+						<td>Robotuppror</td>
+						<td>1000/=</td>
+						<td>
+							<div class="dropdown">
+								<button class="btn btn-primary" data-toggle="dropdown">Handling<span class="caret"></span></button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Redigera-Edit</li>
+									<li><a href="#">Radera-Delete</li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Sigrid</td>
+						<td>Häxa</td>
+						<td>750/=</td>
+						<td>
+							<div class="dropdown">
+								<button class="btn btn-primary" data-toggle="dropdown">Handling<span class="caret"></span></button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Redigera-Edit</li>
+									<li><a href="#">Radera-Delete</li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
